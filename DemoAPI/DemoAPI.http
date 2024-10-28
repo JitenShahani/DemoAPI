@@ -1,0 +1,12 @@
+@DemoAPI_HostAddress = https://localhost:7187
+
+GET {{DemoAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{DemoAPI_HostAddress}}/devinfo/
+Accept: application/json
+X-Test-Header: Request Header Value
+
+###
