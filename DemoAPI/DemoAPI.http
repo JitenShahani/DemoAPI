@@ -7,6 +7,16 @@ Accept: application/json
 
 GET {{DemoAPI_HostAddress}}/devinfo/
 Accept: application/json
-X-Test-Header: Request Header Value
+X-Test-Header: Hello, World!
+
+###
+
+GET {{DemoAPI_HostAddress}}/helloWorld/
+Accept: application/json
+
+###
+
+GET {{DemoAPI_HostAddress}}/someData/
+Accept: application/json
 
 ###
