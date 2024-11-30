@@ -31,11 +31,11 @@ if (app.Environment.IsDevelopment())
 
 	#region Implement Swagger - Use http launch settings
 
-	app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openapi/v1.json", "Demo API v1"); });
+	app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openApi/v1.json", "Demo API v1"); });
 
 	#endregion
 
-	#region Implement Scalar - Use https lauch settings
+	#region Implement Scalar - Use https launch settings
 
 	app.MapScalarApiReference(options =>
 	{
