@@ -1,8 +1,26 @@
+using Microsoft.OpenApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+	options.AddDocumentTransformer((document, _, _) =>
+	{
+		document.Info.Title = "Demo API v1";
+		document.Info.Description = "An API application to demonstrate alternative to Swagger. Implemented Swagger & Scalar clients.";
+		document.Info.Version = "v1";
+		document.Info.Contact = new OpenApiContact()
+		{
+			Name = "Jiten Shahani",
+			Email = "shahani.jiten@gmail.com",
+			Url = new Uri("https://github.com/JitenShahani")
+		};
+
+		return Task.CompletedTask;
+	});
+});
 
 var app = builder.Build();
 

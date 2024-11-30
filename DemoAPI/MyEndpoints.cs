@@ -4,7 +4,7 @@ public class MyEndpoints
 {
 	public void ConfigureMyEndpoints(IEndpointRouteBuilder app)
 	{
-		var group = app.MapGroup("/");
+		var group = app.MapGroup("/").WithOpenApi();
 
 		group.MapGet("weatherForecast", GetWeatherForecast)
 			.WithTags("Forecast")
